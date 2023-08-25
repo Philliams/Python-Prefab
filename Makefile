@@ -43,6 +43,9 @@ run_frontend:
 	-it -p ${frontend_port}:${frontend_port} ${dev_name} \
 	streamlit run /src/frontend/main_frontend.py --server.port=${frontend_port} --server.address=0.0.0.0
 
+run_all:
+	docker compose -f ./docker/compose.yaml up
+
 # TEST COMMANDS
 test:
 	docker rm --force ${test_name}
@@ -55,3 +58,4 @@ clean:
 	docker rm --force ${jupyter_name}
 	docker rm --force ${frontend_name}
 	docker rm --force ${backend_name}
+	docker compose -f ./docker/compose.yaml down

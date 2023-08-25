@@ -16,5 +16,6 @@ There are several run instruction that can be invoked:
 1. `make run_jupyter` : run the jupyter notebook, it can be accessed as `localhost:8888`
 2. `make run_backend` : run the backend FastAPI server, it can be accessed as `localhost:8000`
 3. `make run_frontend` : run the streamlit frontend server, it can be accessed as `localhost:8501`
+4. `make run_all` : run all of the servers using docker compose
 
 To clean up all the docker containers, execute `make clean`.

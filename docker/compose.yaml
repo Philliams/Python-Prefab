@@ -1,0 +1,15 @@
+services:
+  backend:
+    image: "python-prefab-dev"
+    ports:
+      - "8000:8000"
+    entrypoint: ["python", "/src/backend/main_backend.py"]
+  frontend:
+    image: "python-prefab-dev"
+    ports:
+      - "8501:8501"
+    entrypoint: ["streamlit", "run", "/src/frontend/main_frontend.py", "--server.port=8501", "--server.address=0.0.0.0"]
+  jupyter:
+    image:  "python-prefab-jupyter"
+    ports:
+      - "8888:8888"
