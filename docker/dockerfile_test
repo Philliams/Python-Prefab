@@ -5,5 +5,6 @@ COPY /requirements /requirements
 COPY /unittests /unittests
 
 RUN pip install -r ./requirements/dev.txt
+RUN pip install -r ./requirements/test.txt
 
-ENTRYPOINT ["python", "/src/backend/main_backend.py"]
+ENTRYPOINT ["python", "-m", "pytest", "--cov=src", "unittests/"]
