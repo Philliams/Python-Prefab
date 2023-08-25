@@ -2,8 +2,5 @@ FROM python:3.11
 
 COPY /src /src
 COPY /requirements /requirements
-COPY /unittests /unittests
 
 RUN pip install -r ./requirements/dev.txt
-
-ENTRYPOINT ["python", "/src/backend/main_backend.py"]

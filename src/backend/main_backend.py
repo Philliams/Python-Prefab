@@ -9,8 +9,8 @@ app = FastAPI()
 
 @app.get('/')
 async def root():
-    print('Sleeping for 10')
-    await asyncio.sleep(10)
+    print('Sleeping for 1')
+    await asyncio.sleep(1)
     print('Awake')
     return {'message': 'hello'}
 
