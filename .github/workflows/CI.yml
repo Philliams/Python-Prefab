@@ -10,6 +10,7 @@ on:
 jobs:
   build:
     # use ubuntu-22.04 because it has docker pre-installed
+    # see : https://github.com/actions/runner-images
     runs-on: ubuntu-22.04
     permissions:
       contents: write

@@ -49,7 +49,7 @@ run_all:
 # TEST COMMANDS
 test:
 	docker rm --force ${test_name}
-	docker run --name ${test_name} -it ${test_name} \
+	docker run --name ${test_name} ${test_name} \
 	python -m pytest --cov=src unittests/
 
 
@@ -65,5 +65,5 @@ clean:
 build_docs:
 	docker rm --force ${test_name}
 	docker run --name ${test_name} \
-	--mount type=bind,source=./docs,target=/docs -it ${test_name} \
+	--mount type=bind,source=./docs,target=/docs ${test_name} \
 	sphinx-build -b html ./docs/source ./docs/build
