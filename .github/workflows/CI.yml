@@ -29,17 +29,12 @@ jobs:
         run: make test
       - name: Build docs
         run: make build_docs
-      - name: validate files
-        run: ls ./docs/build
-      - name: validate viles
-        run: pwd
-      - name: validate files
-        run: ls /home/runner/work/Python-Prefab/Python-Prefab/docs/build/
+      - name: Remove docs .gitignore
+        run: rm ./docs/build/.gitignore
       - name: Deploy documentation to gh-pages
-        uses: peaceiris/actions-gh-pages@v3.6.4
+        uses: peaceiris/actions-gh-pages@3
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs/build/
-          # exclude_assets: ''
-          # force_orphan: true
+          force_orphan: true
