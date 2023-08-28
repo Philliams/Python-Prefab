@@ -31,6 +31,10 @@ jobs:
         run: make build_docs
       - name: validate files
         run: ls ./docs/build
+      - name: validate viles
+        run: pwd
+      - name: validate files
+        run: ls /home/runner/work/Python-Prefab/Python-Prefab/docs/build/
       - name: Deploy documentation to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
