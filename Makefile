@@ -49,9 +49,11 @@ run_all:
 # TEST COMMANDS
 test:
 	docker rm --force ${test_name}
-	docker run --name ${test_name} -it ${test_name}
+	docker run --name ${test_name} -it ${test_name} \
+	python -m pytest --cov=src unittests/
 
-# MISC. COMMANDSm
+
+# MISC. COMMANDS
 clean:
 	docker rm --force ${dev_name}
 	docker rm --force ${test_name}
@@ -59,3 +61,9 @@ clean:
 	docker rm --force ${frontend_name}
 	docker rm --force ${backend_name}
 	docker compose -f ./docker/compose.yaml down
+
+build_docs:
+	docker rm --force ${test_name}
+	docker run --name ${test_name} \
+	--mount type=bind,source=./docs,target=/docs -it ${test_name} \
+	sphinx-build -b html ./docs/source ./docs/build
