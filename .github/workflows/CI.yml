@@ -1,0 +1,19 @@
+name: Python-Prefab-CI
+
+# run CI anytime there is a push to main branch or trigger manually
+on:
+  workflow_dispatch
+  push:
+    branches:
+      - 'main'
+  
+jobs:
+  build:
+    runs-on: macos-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - name: Test
+        run: ls

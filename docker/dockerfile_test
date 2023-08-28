@@ -7,6 +7,3 @@ COPY /docs /docs
 
 RUN pip install -r ./requirements/dev.txt
 RUN pip install -r ./requirements/test.txt
-
-# RUN apt-get update
-# RUN apt-get -y install python3-sphinx
