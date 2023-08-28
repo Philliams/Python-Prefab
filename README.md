@@ -1,6 +1,10 @@
 # Python-Prefab
 A premade python project with front end, back end, testing and CI pipelines.
 
+All of the documentation is generated via Sphinx and exposed via Github Pages.
+
+[Python-Prefab Documentation](https://philliams.github.io/Python-Prefab/)
+
 ## Prerequisites
 The main prerequisites for this project are:
 
