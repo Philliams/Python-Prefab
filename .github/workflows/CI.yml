@@ -15,5 +15,9 @@ jobs:
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - name: Test
-        run: ls
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Test docker
+        uses: docker --help
+      - name: Test make
+        uses: make --helpd
