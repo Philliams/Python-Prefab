@@ -28,10 +28,7 @@ jobs:
       - name: Run tests
         run: make test
       - name: Build docs
-        run: make docs
-      - name: validate files
-        run: |
-          ls ./docs/build
+        run: make build_docs
       - name: Deploy documentation to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
