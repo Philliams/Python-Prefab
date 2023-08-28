@@ -9,15 +9,22 @@ on:
   
 jobs:
   build:
-    runs-on: macos-latest
+    # use ubuntu-22.04 because it has docker pre-installed
+    runs-on: ubuntu-22.04
     permissions:
       contents: write
+    # run one instance per workflow per branch
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
+    # CI steps
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Test docker
         run: docker --help
       - name: Test make
-        run: make --helpd
+        run: make --help
+      - name: Build all images
+        run: make build
+      - name: Run tests
+        run: make test
