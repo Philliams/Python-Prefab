@@ -1,3 +1,7 @@
 pytest
 pytest-cov
 sphinx
+ruff
+mypy
+pandas-stubs
+isort

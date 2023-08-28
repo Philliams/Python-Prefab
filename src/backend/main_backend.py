@@ -1,6 +1,8 @@
 import asyncio
+
 import uvicorn
 from fastapi import FastAPI
+
 
 def dummy_function_back_end(x: str) -> str:
     return x
