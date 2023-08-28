@@ -2,7 +2,7 @@ name: Python-Prefab-CI
 
 # run CI anytime there is a push to main branch or trigger manually
 on:
-  workflow_dispatch
+  workflow_dispatch:
   push:
     branches:
       - 'main'
