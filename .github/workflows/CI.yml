@@ -36,10 +36,10 @@ jobs:
       - name: validate files
         run: ls /home/runner/work/Python-Prefab/Python-Prefab/docs/build/
       - name: Deploy documentation to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v3.9.1
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs/build/
-          exclude_assets: ''
+          # exclude_assets: ''
           # force_orphan: true
