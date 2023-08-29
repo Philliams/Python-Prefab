@@ -12,7 +12,7 @@ sys.path.insert(0, os.path.abspath('../..'))
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'CI-Workflows'
+project = 'Python-Prefab'
 copyright = '2023, Phillip Williams'
 author = 'Phillip Williams'
 
@@ -23,7 +23,8 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosectionlabel',
     'sphinx.ext.autosummary',
-    'sphinx.ext.doctest'
+    'sphinx.ext.doctest',
+    'sphinxmermaid'
 ]
 
 autosummary_generate = True

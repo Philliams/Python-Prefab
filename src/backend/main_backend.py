@@ -5,6 +5,14 @@ from fastapi import FastAPI
 
 
 def dummy_function_back_end(x: str) -> str:
+    """A sample docstring using pep-0257 (https://peps.python.org/pep-0257/) formatting
+
+    :param x: a dummy string
+    :type x: str
+
+    :return: a dummy string
+    :rtype: str
+    """
     return x
 
 app = FastAPI()

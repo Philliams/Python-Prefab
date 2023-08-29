@@ -21,7 +21,7 @@ build_test: build_dev
 build_jupyter: build_dev
 	docker build -t ${jupyter_name} -f ./docker/dockerfile_jupyter .
 
-build: build_dev build_test build_jupyter
+build_all: build_dev build_test build_jupyter
 
 # RUN COMMANDS
 run_jupyter: build_jupyter

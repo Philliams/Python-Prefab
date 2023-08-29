@@ -5,3 +5,4 @@ ruff
 mypy
 pandas-stubs
 isort
+sphinx-mermaid
