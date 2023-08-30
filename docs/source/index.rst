@@ -1,7 +1,8 @@
-Welcome to CI-Workflows
+Welcome to Python-Prefab
 ========================================
 
-This is the main entrypoint for the CI-Workflows documentation. Below is a table of contents of various sample documentation pages demonstrating various aspects of Sphinx auto-docs.
+This is the main entrypoint for the Python-Prefab documentation.
+Below is a table of contents of various sample documentation pages demonstrating various aspects of Sphinx auto-docs.
 
 .. toctree::
     :maxdepth: 2
