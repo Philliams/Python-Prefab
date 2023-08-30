@@ -10,11 +10,3 @@ This is the main entrypoint for the CI-Workflows documentation. Below is a table
     pages/tutorials/tutorials_index
     pages/references/references_index
     pages/explanations/explanations_index
-    
-    
-
-.. mermaid ::
-
-    graph TD
-    A --> B
-    B -- Label --> C

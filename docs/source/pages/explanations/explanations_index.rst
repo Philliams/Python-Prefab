@@ -6,4 +6,3 @@ Explanations and Design Documents
 
     design_template
     documentation_system
-    system_architecture

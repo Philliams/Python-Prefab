@@ -42,7 +42,7 @@ run_frontend: build_dev
 	-it -p ${frontend_port}:${frontend_port} ${dev_name} \
 	streamlit run /src/frontend/main_frontend.py --server.port=${frontend_port} --server.address=0.0.0.0
 
-run_all: build
+run_all: build_all
 	docker compose -f ./docker/compose.yaml up
 
 # TEST COMMANDS
