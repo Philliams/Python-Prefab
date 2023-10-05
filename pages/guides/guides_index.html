@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Guides &#8212; Python-Prefab  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=514cf933" />
+    
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({"startOnLoad": true})</script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Tutorials" href="../tutorials/tutorials_index.html" />
+    <link rel="prev" title="Welcome to Python-Prefab" href="../../index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../tutorials/tutorials_index.html" title="Tutorials"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../../index.html" title="Welcome to Python-Prefab"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Python-Prefab  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Guides</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="guides">
+<h1>Guides<a class="headerlink" href="#guides" title="Link to this heading">¶</a></h1>
+<p>Guides typically focus around solving a specific problem, or accomplishing a commonly performed action.
+Guides can include code snippets and terminal commands.</p>
+<section id="updating-documentation">
+<h2>Updating Documentation<a class="headerlink" href="#updating-documentation" title="Link to this heading">¶</a></h2>
+<p>There are a handful of steps to updating the documentation:</p>
+<ol class="arabic simple">
+<li><p>Update the relevant file(s) in the <code class="docutils literal notranslate"><span class="pre">/docs/source</span></code> directory</p></li>
+<li><p>(Optional) Delete the old local documentation files via <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code></p></li>
+<li><p>Build the documentation via <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">build_docs</span></code></p></li>
+<li><p>Validate the changes in the <code class="docutils literal notranslate"><span class="pre">/docs/build</span></code> directory</p></li>
+</ol>
+<p>Once the changes are validated, commit the changes to github. When the changes are merged into master,
+the documentation will be updated via a github actions and hosted at
+<a class="reference external" href="https://philliams.github.io/Python-Prefab/">https://philliams.github.io/Python-Prefab/</a>.</p>
+</section>
+<section id="updating-code-and-unit-tests">
+<h2>Updating Code and Unit Tests<a class="headerlink" href="#updating-code-and-unit-tests" title="Link to this heading">¶</a></h2>
+<p>There are a handful of steps to updating the code:</p>
+<ol class="arabic simple">
+<li><p>Update the relevant file(s) in the <code class="docutils literal notranslate"><span class="pre">/src</span></code> directory</p></li>
+<li><p>Build the dev images via <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">build_dev</span></code></p></li>
+<li><p>Run the application via <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">run_all</span></code></p></li>
+<li><p>(Optional) Validate the application manually by making requests to the servers on ports 8000 and 8501</p></li>
+<li><p>Update the unit tests in the <code class="docutils literal notranslate"><span class="pre">/unittests</span></code> directory</p></li>
+<li><p>Build the test image via <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">build_test</span></code></p></li>
+<li><p>Run the unit tests via <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">test</span></code></p></li>
+<li><p>Once the code is correct and the tests pass, lint the code via <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">lint</span></code></p></li>
+</ol>
+<p>Once the changes are validated, commit the changes to github.
+The tests will run on commits to PR, and can be merged when it passes.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Guides</a><ul>
+<li><a class="reference internal" href="#updating-documentation">Updating Documentation</a></li>
+<li><a class="reference internal" href="#updating-code-and-unit-tests">Updating Code and Unit Tests</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../../index.html"
+                          title="previous chapter">Welcome to Python-Prefab</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../tutorials/tutorials_index.html"
+                          title="next chapter">Tutorials</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pages/guides/guides_index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../tutorials/tutorials_index.html" title="Tutorials"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../../index.html" title="Welcome to Python-Prefab"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Python-Prefab  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Guides</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2023, Phillip Williams.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

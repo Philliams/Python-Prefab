@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Getting Started &#8212; Python-Prefab  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=514cf933" />
+    
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({"startOnLoad": true})</script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="API Reference" href="../references/references_index.html" />
+    <link rel="prev" title="Tutorials" href="tutorials_index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../references/references_index.html" title="API Reference"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="tutorials_index.html" title="Tutorials"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Python-Prefab  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="tutorials_index.html" accesskey="U">Tutorials</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Getting Started</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">¶</a></h1>
+<p>This tutorial will describe how to get <code class="docutils literal notranslate"><span class="pre">Python-Prefab</span></code> up and running from a blank machine.
+This will include installing project dependencies, building docker images, deploying containers and finally accessing the application.</p>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">¶</a></h2>
+<p>The main prerequisite for this project is the package manager of your choice for your given platform:</p>
+<ol class="arabic simple">
+<li><p>OSX : Install <a class="reference external" href="https://brew.sh/">Homebrew</a></p></li>
+<li><p>Windows : Install <a class="reference external" href="https://chocolatey.org/install">Chocolatey</a></p></li>
+<li><p>Linux : Make sure that <code class="docutils literal notranslate"><span class="pre">apt-get</span></code>, <code class="docutils literal notranslate"><span class="pre">yum</span></code> or your pacakge manager of choice is working</p></li>
+</ol>
+</section>
+<section id="installing-project-dependencies">
+<h2>Installing Project Dependencies<a class="headerlink" href="#installing-project-dependencies" title="Link to this heading">¶</a></h2>
+<p>Once your package manager is installed and configured, install <a class="reference external" href="https://www.gnu.org/software/make/">Make</a> and <a class="reference external" href="https://docs.docker.com/engine/install/">Docker</a>.</p>
+<section id="osx">
+<h3>OSX<a class="headerlink" href="#osx" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">make</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">docker</span></code></p></li>
+</ol>
+</section>
+<section id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">choco</span> <span class="pre">install</span> <span class="pre">make</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">choco</span> <span class="pre">install</span> <span class="pre">docker</span></code></p></li>
+</ol>
+</section>
+</section>
+<section id="running-application">
+<h2>Running Application<a class="headerlink" href="#running-application" title="Link to this heading">¶</a></h2>
+<p>The application is containerized and is run using <code class="docutils literal notranslate"><span class="pre">Docker</span></code>. Multiple commands are available in the Makefile, but the main ones are:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">build_all</span></code> : Build docker images for the front-end, back-end, jupyter server and test environment</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">run_all</span></code> : Run the front-end, back-end and jupyter server using <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">test</span></code> : Run unit tests using <code class="docutils literal notranslate"><span class="pre">Pytest</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">build_docs</span></code> : Build documentation using <code class="docutils literal notranslate"><span class="pre">Sphinx</span></code></p></li>
+</ol>
+</section>
+<section id="accessing-application">
+<h2>Accessing Application<a class="headerlink" href="#accessing-application" title="Link to this heading">¶</a></h2>
+<p>Once the application is running using <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">run_all</span></code>, the servers can be accessed on various ports:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">localhost:8000</span></code> : access the back-end server</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localhost:8501</span></code> : access the front-end server</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localhost:8888</span></code> : access the jupyter server (note: an access token is needed to login, and can be found in the terminal output for the jupyter docker container)</p></li>
+</ol>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Getting Started</a><ul>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#installing-project-dependencies">Installing Project Dependencies</a><ul>
+<li><a class="reference internal" href="#osx">OSX</a></li>
+<li><a class="reference internal" href="#windows">Windows</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#running-application">Running Application</a></li>
+<li><a class="reference internal" href="#accessing-application">Accessing Application</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="tutorials_index.html"
+                          title="previous chapter">Tutorials</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../references/references_index.html"
+                          title="next chapter">API Reference</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pages/tutorials/getting_started.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../references/references_index.html" title="API Reference"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="tutorials_index.html" title="Tutorials"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Python-Prefab  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="tutorials_index.html" >Tutorials</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Getting Started</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2023, Phillip Williams.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

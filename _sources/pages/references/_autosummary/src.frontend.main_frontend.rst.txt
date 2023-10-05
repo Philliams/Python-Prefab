@@ -1,0 +1,31 @@
+src.frontend.main\_frontend
+===========================
+
+.. automodule:: src.frontend.main_frontend
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      dummy_function_front_end
+      load_data
+      to_lower
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

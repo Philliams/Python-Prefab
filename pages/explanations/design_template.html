@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Design Template &#8212; Python-Prefab  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=514cf933" />
+    
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({"startOnLoad": true})</script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Documentation System" href="documentation_system.html" />
+    <link rel="prev" title="Explanations and Design Documents" href="explanations_index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="documentation_system.html" title="Documentation System"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="explanations_index.html" title="Explanations and Design Documents"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Python-Prefab  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="explanations_index.html" accesskey="U">Explanations and Design Documents</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Design Template</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="design-template">
+<h1>Design Template<a class="headerlink" href="#design-template" title="Link to this heading">¶</a></h1>
+<p>It is crucial to document not only what design, architecture and decisions are made, but also why said decisions or designs were chosen.
+The design document is based on the <a class="reference external" href="https://www.darpa.mil/work-with-us/heilmeier-catechism">Heilmeier catechism</a> and
+aims to provide a template for what decisions, why there were made, and any relevant context or information.</p>
+<section id="design-overview">
+<h2>Design Overview<a class="headerlink" href="#design-overview" title="Link to this heading">¶</a></h2>
+<p>This section outlines summary information for the design document.</p>
+<p><strong>Design Title</strong> : Python Prefab</p>
+<p><strong>Responsible For Design</strong> : Philliams</p>
+<p><strong>Date of the design</strong> : 29/08/2023</p>
+</section>
+<section id="context">
+<h2>Context<a class="headerlink" href="#context" title="Link to this heading">¶</a></h2>
+<p>The context provides key background information about the design. Some information would include:</p>
+<ol class="arabic simple">
+<li><p>The problem being solved</p></li>
+<li><p>Key limitations (such as compute, security, etc.)</p></li>
+<li><p>Existing resources available</p></li>
+<li><p>Architectural constraints (must scale, cannot use X technology, must have X% uptime, etc.)</p></li>
+<li><p>Relevant development timelines</p></li>
+<li><p>Etc.</p></li>
+</ol>
+</section>
+<section id="requirements-and-assumptions">
+<h2>Requirements and Assumptions<a class="headerlink" href="#requirements-and-assumptions" title="Link to this heading">¶</a></h2>
+<p>The requirements and assumptions provide clear specification as to the exact nature of the problem being solved:</p>
+<ol class="arabic simple">
+<li><p>How is the software being run?</p></li>
+<li><p>How often is the software being run?</p></li>
+<li><p>What are the SLA’s for the software?</p></li>
+<li><p>What are the inputs and outputs to the system?</p></li>
+<li><p>What environment is the software deployed on?</p></li>
+<li><p>How the software interact with other components?</p></li>
+<li><p>Etc.</p></li>
+</ol>
+</section>
+<section id="design">
+<h2>Design<a class="headerlink" href="#design" title="Link to this heading">¶</a></h2>
+<p>The design will describe the technologies, architecture and implementation chosen.
+This section should include various diagrams, code snippets and other media to help
+describe the final decision made.</p>
+</section>
+<section id="pros-and-cons">
+<h2>Pros and Cons<a class="headerlink" href="#pros-and-cons" title="Link to this heading">¶</a></h2>
+<p>The pros and cons section will describe the advantages and disadvantages of the chosen design.
+This may include information such as performance and cost, complexity, testibility, deployability,
+development costs and risks</p>
+</section>
+<section id="alternatives-not-chosen">
+<h2>Alternatives Not Chosen<a class="headerlink" href="#alternatives-not-chosen" title="Link to this heading">¶</a></h2>
+<p>Typically several options will be considered.
+This section will give a summary description of various alternatives and why they were not chosen.</p>
+</section>
+<section id="milestones">
+<h2>Milestones<a class="headerlink" href="#milestones" title="Link to this heading">¶</a></h2>
+<p>This section should describe what the intermediate and final checks and deliverables are, as well as how they would be checked:</p>
+<ol class="arabic simple">
+<li><p>What are the milestones/deliverables?</p></li>
+<li><p>When are the milestones/deliverables due?</p></li>
+<li><p>How are the milestones/deliverables validated?</p></li>
+</ol>
+</section>
+<section id="future-considerations">
+<h2>Future Considerations<a class="headerlink" href="#future-considerations" title="Link to this heading">¶</a></h2>
+<p>The design is chosen given a set on constraints at a given point in time.
+If requirements, constraints or context change, then a different design may be more favorable.
+This section describes under what conditions the design should be re-evaluated.</p>
+</section>
+<section id="relevant-links">
+<h2>Relevant Links<a class="headerlink" href="#relevant-links" title="Link to this heading">¶</a></h2>
+<p>This section contains links to relevant resources:</p>
+<ol class="arabic simple">
+<li><p>External design documents</p></li>
+<li><p>Links to various libraries and references</p></li>
+<li><p>Training videos</p></li>
+<li><p>Blog posts</p></li>
+<li><p>Etc.</p></li>
+</ol>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Design Template</a><ul>
+<li><a class="reference internal" href="#design-overview">Design Overview</a></li>
+<li><a class="reference internal" href="#context">Context</a></li>
+<li><a class="reference internal" href="#requirements-and-assumptions">Requirements and Assumptions</a></li>
+<li><a class="reference internal" href="#design">Design</a></li>
+<li><a class="reference internal" href="#pros-and-cons">Pros and Cons</a></li>
+<li><a class="reference internal" href="#alternatives-not-chosen">Alternatives Not Chosen</a></li>
+<li><a class="reference internal" href="#milestones">Milestones</a></li>
+<li><a class="reference internal" href="#future-considerations">Future Considerations</a></li>
+<li><a class="reference internal" href="#relevant-links">Relevant Links</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="explanations_index.html"
+                          title="previous chapter">Explanations and Design Documents</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="documentation_system.html"
+                          title="next chapter">Documentation System</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pages/explanations/design_template.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="documentation_system.html" title="Documentation System"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="explanations_index.html" title="Explanations and Design Documents"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Python-Prefab  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="explanations_index.html" >Explanations and Design Documents</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Design Template</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2023, Phillip Williams.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>
